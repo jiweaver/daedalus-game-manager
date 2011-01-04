@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="The main settings storage.  When a setting is changed via the PropertyGrid, the change is happens here.">
+    <Position X="2.698" Y="6.042" Height="0.814" Width="1.7" />
+  </Comment>
+  <Comment CommentText="This is basically a PropertyGrid window into the static OwariSettings class.  A reference to one of these is passed up to the game manager to show users when they run the game's configuration.">
+    <Position X="2.64" Y="4.269" Height="1.453" Width="1.88" />
+  </Comment>
+  <Class Name="OwariGame.OwariGameInterface" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIBAAAAAAAAABAAAAAAAgAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>OwariGameInterface.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OwariGame.OwariLogic">
+    <Position X="8.75" Y="0.5" Width="2.25" />
+    <Members>
+      <Method Name="Capture" Hidden="true" />
+      <Method Name="CheckMoveValidity" Hidden="true" />
+      <Method Name="EndGame" Hidden="true" />
+      <Method Name="GetMove" Hidden="true" />
+      <Method Name="OwariLogic" Hidden="true" />
+      <Method Name="printBoardState" Hidden="true" />
+      <Method Name="Redistribute" Hidden="true" />
+      <Field Name="state" Hidden="true" />
+      <Field Name="whiteIsSouth" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAIAAAAAAAAAAAAAIAAAAAAgAEAhAgAACQAAA=</HashCode>
+      <FileName>OwariLogic.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OwariGame.OwariPainter">
+    <Position X="5" Y="0.5" Width="3" />
+    <Members>
+      <Method Name="DrawBucket" Hidden="true" />
+      <Method Name="DrawGameOver" Hidden="true" />
+      <Method Name="OwariPainter" Hidden="true" />
+      <Method Name="pictureBox1_Resize" Hidden="true" />
+      <Method Name="UpdateScalingInfo" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Class Name="OwariGame.OwariPainter.BackgroundImageSizeInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>OwariPainter.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="OwariGame.OwariPainter._CurrentImageInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>OwariPainter.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAgEgAAAAAAAAAQAAAIEAAAABAAJAAAA=</HashCode>
+      <FileName>OwariPainter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OwariGame.Properties.Resources">
+    <Position X="9" Y="3.75" Width="3" />
+    <Members>
+      <Property Name="Culture" Hidden="true" />
+      <Field Name="resourceCulture" Hidden="true" />
+      <Field Name="resourceMan" Hidden="true" />
+      <Property Name="ResourceManager" Hidden="true" />
+      <Method Name="Resources" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAIAAAAAABAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OwariGame.OwariConfiguration">
+    <Position X="5.75" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OwariConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OwariGame.OwariProperties">
+    <Position X="0.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAQAA=</HashCode>
+      <FileName>OwariConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OwariGame.OwariSettings">
+    <Position X="0.5" Y="6" Width="2" />
+    <Members>
+      <Field Name="maxSeedsForCapture" Hidden="true" />
+      <Field Name="minSeedsForCapture" Hidden="true" />
+      <Field Name="startingSeedsPerTray" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIAAAACEAAAAAAQAAAAAAAAAAAAAAAAAAEAAAAAAQAA=</HashCode>
+      <FileName>OwariConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

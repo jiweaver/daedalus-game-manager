@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="Every game must implement the BoardState and Move message classes.  For more specific examples, see the Tzaar and Owari game modules.">
+    <Position X="4.396" Y="0.552" Height="1.146" Width="1.7" />
+  </Comment>
+  <Class Name="SkeletonGame.SkeletonMessage">
+    <Position X="4.25" Y="1.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="SkeletonGame.SkeletonMessage.BoardState">
+        <Members>
+          <Field Name="board" Hidden="true" />
+          <Method Name="BoardState" Hidden="true" />
+          <Method Name="GetBoardStateFromString" Hidden="true" />
+          <Method Name="GetStringFromBoardState" Hidden="true" />
+        </Members>
+        <TypeIdentifier>
+          <NewMemberFileName>SkeletonMessage.BoardState.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SkeletonGame.SkeletonMessage.Move">
+        <Members>
+          <Field Name="command" Hidden="true" />
+          <Method Name="Move" Hidden="true" />
+        </Members>
+        <TypeIdentifier>
+          <NewMemberFileName>SkeletonMessage.Move.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameMessage\SkeletonMessage.BoardState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DaedalusGameProtocol.GameMessage">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="DaedalusGameProtocol.GameMessage.YourPlayerNumber" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="DaedalusGameProtocol.GameMessage.GameOver" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="DaedalusGameProtocol.GameMessage.Chat" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="DaedalusGameProtocol.GameMessage.Move" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="DaedalusGameProtocol.GameMessage.Control" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="DaedalusGameProtocol.GameMessage.BoardState" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="DaedalusGameProtocol.GameMessage.Version" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="DaedalusGameProtocol.GameMessage.YourTurn" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

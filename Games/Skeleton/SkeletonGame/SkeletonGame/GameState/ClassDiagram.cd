@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="Every game must implement the GameState and GameBoard classes.  For more specific examples, see the Tzaar and Owari game modules.">
+    <Position X="5.385" Y="1.531" Height="1.125" Width="1.7" />
+  </Comment>
+  <Class Name="SkeletonGame.SkeletonBoard">
+    <Position X="5.25" Y="4.75" Width="1.75" />
+    <Members>
+      <Method Name="SkeletonBoard" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameState\SkeletonBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkeletonGame.SkeletonGameState">
+    <Position X="4.75" Y="2.75" Width="3" />
+    <Members>
+      <Method Name="SkeletonGameState" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>GameState\SkeletonGameState.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Board" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DaedalusGameProtocol.GameState">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Field Name="board" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DaedalusGameProtocol.GameBoard">
+    <Position X="1" Y="5.25" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

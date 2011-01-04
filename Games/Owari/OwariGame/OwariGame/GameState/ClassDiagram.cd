@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="OwariGame.OwariBoard">
+    <Position X="1" Y="2.5" Width="1.75" />
+    <Members>
+      <Field Name="buckets" Hidden="true" />
+      <Method Name="OwariBoard" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAABAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameState\OwariBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OwariGame.OwariGameState">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <Members>
+      <Method Name="OwariGameState" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>GameState\OwariGameState.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Board" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

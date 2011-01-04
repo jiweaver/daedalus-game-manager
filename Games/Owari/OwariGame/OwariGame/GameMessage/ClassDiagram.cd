@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="OwariGame.OwariMessage">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="OwariGame.OwariMessage.BoardState">
+        <Members>
+          <Field Name="board" Hidden="true" />
+          <Method Name="BoardState" Hidden="true" />
+          <Method Name="GetBoardStateFromString" Hidden="true" />
+          <Method Name="GetStringFromBoardState" Hidden="true" />
+        </Members>
+        <TypeIdentifier>
+          <NewMemberFileName>OwariMessage.BoardState.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="OwariGame.OwariMessage.Move">
+        <Members>
+          <Field Name="command" Hidden="true" />
+          <Method Name="Move" Hidden="true" />
+        </Members>
+        <TypeIdentifier>
+          <NewMemberFileName>OwariMessage.Move.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameMessage\OwariMessage.BoardState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CFD511AB-ACF1-4329-8205-95FB62E1B4AD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestSuite</RootNamespace>
+    <AssemblyName>TestSuite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OwariGameTests\OwariGameTests.cs" />
+    <Compile Include="TwoClientsOneServerTest.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TzaarGameTests\TzaarGameTests.BoardMap.cs" />
+    <Compile Include="TzaarGameTests\TzaarGameTests.Board.cs" />
+    <Compile Include="TzaarGameTests\TzaarGameTests.cs" />
+    <Compile Include="TzaarGameTests\TzaarGameTests.Logic.cs" />
+    <Compile Include="TzaarGameTests\TzaarGameTests.Messages.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="OwariGameTests\ClassDiagram.cd" />
+    <None Include="TzaarGameTests\ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DaedalusGameProtocol\DaedalusGameProtocol\DaedalusGameProtocol.csproj">
+      <Project>{65D12FC4-94B3-43D8-A809-C826C5AB51D1}</Project>
+      <Name>DaedalusGameProtocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Games\Owari\OwariGame\OwariGame\OwariGame.csproj">
+      <Project>{D46F3FF9-BB58-4063-AD29-F11FD79D2B32}</Project>
+      <Name>OwariGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Games\Skeleton\SkeletonGame\SkeletonGame\SkeletonGame.csproj">
+      <Project>{E1C46898-C3DC-49CE-B3B9-778D4C831A7A}</Project>
+      <Name>SkeletonGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Games\Tzaar\TzaarGame\TzaarGame\TzaarGame.csproj">
+      <Project>{E75C24D3-37D3-415D-8046-8CC3346803A2}</Project>
+      <Name>TzaarGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DaedalusGameManager\DaedalusGameManager.csproj">
+      <Project>{F7243EDA-E9B5-478D-97B3-8FA6E1E084F3}</Project>
+      <Name>DaedalusGameManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

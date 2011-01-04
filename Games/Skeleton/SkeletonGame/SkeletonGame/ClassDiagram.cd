@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="The game-specific main interface implementation.">
+    <Position X="1.313" Y="1.375" Height="0.291" Width="3.075" />
+  </Comment>
+  <Comment CommentText="The game-specific logic implementation.">
+    <Position X="5.854" Y="1.583" Height="0.333" Width="2.513" />
+  </Comment>
+  <Comment CommentText="The game-specific painter implementation.">
+    <Position X="9.552" Y="1.708" Height="0.49" Width="1.919" />
+  </Comment>
+  <Comment CommentText=" See the Interface class diagrams in the DaedalusGameProtocol project for more information.  Also, see the examples provided by the Tzaar and Owari game modules.">
+    <Position X="0.5" Y="0.5" Height="0.469" Width="6.127" />
+  </Comment>
+  <Class Name="SkeletonGame.SkeletonGameInterface" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="2" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>SkeletonGameInterface.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SkeletonGame.SkeletonLogic">
+    <Position X="5.75" Y="2.25" Width="2.75" />
+    <Members>
+      <Method Name="SkeletonLogic" Hidden="true" />
+      <Field Name="State" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAgAAAAAQBACAAAA=</HashCode>
+      <FileName>SkeletonLogic.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.221" />
+  </Class>
+  <Class Name="SkeletonGame.SkeletonPainter">
+    <Position X="9.5" Y="2.5" Width="2" />
+    <Members>
+      <Method Name="SkeletonPainter" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>SkeletonPainter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="DaedalusGameProtocol.IGameLogic">
+    <Position X="5.75" Y="4" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="DaedalusGameProtocol.IGame">
+    <Position X="0.75" Y="4" Width="4.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="DaedalusGameProtocol.IGamePainter">
+    <Position X="9.5" Y="4.25" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
