@@ -1,4 +1,4 @@
-﻿/* $Id: SkeletonPainter.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  * 
  * Description: The SkeletonPainter class takes a PictureBox as a parameter to 
  * its constructor and latches onto it; then it draws the display within that 

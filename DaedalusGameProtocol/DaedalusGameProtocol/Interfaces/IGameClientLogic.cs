@@ -1,4 +1,4 @@
-﻿/* $Id: IGameClientLogic.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  *
  * Description: An implementation of this interface is the game logic necessary 
  * to play a particular game with the GUI Client.

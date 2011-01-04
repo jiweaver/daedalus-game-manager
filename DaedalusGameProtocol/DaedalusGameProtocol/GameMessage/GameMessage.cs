@@ -1,4 +1,4 @@
-﻿/* $Id: GameMessage.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  *
  * Description: The GameMessage abstract class has concrete subclasses that each
  * implement GameMessage for one of the five message types (Move, 

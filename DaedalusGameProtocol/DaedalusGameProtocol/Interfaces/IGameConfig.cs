@@ -1,4 +1,4 @@
-﻿/* $Id: IGameConfig.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  * 
  * Description: This is the interface through which games can set up their game
  * configurations options (variations in rules, board setup, etc).

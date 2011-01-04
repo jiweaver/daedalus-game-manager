@@ -1,4 +1,4 @@
-﻿/* $Id: TwoClientsOneServerTest.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  *
  * Description: The "2-client-1-server" test.  It starts a game server, and
  * spawns two client threads that connect and play a game by requesting each new

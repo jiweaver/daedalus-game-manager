@@ -1,4 +1,4 @@
-﻿/* $Id: TzaarBoardPosition.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  *
  * Description: And TzaarBoard.Position object represents a position on the
  * TzaarBoard.  It contains all necessary information about the state of that

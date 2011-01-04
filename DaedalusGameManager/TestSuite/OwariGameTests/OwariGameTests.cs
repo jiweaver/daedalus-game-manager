@@ -1,4 +1,4 @@
-﻿/* $Id: OwariGameTests.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  *
  * Description: Defines and passes the GetNextMove method to the 
  * TwoClientsOneServer tests.

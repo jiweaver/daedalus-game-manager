@@ -1,4 +1,4 @@
-﻿/* $Id: NetworkServerEventHub.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  * 
  * Description: The NetworkServerEventHub class manages the passing of events
  * between the client threads and the server.

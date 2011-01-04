@@ -1,4 +1,4 @@
-﻿/* $Id: OwariBoard.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  * 
  * Description: Holds a snapshot of a board state.
  *

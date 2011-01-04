@@ -1,4 +1,4 @@
-﻿/* $Id: TzaarGameState.cs 835 2011-01-03 15:17:50Z piranther $
+﻿/* $Id$
  *
  * Description: The game state holds the board state, as well as scoring and
  * turn information.

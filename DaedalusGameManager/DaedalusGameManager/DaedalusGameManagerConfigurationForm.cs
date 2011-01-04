@@ -1,4 +1,4 @@
-﻿/* $Id: DaedalusGameManagerConfigurationForm.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  *
  * Description: The game manager's configuration form displays a property grid
  * that controls the game manager's configuration.

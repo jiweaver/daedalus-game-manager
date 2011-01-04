@@ -1,4 +1,4 @@
-﻿/* $Id: DaedalusClient.cs 821 2011-01-03 04:18:15Z crosis $
+﻿/* $Id$
  * 
  * Description: This class maintains a connection to a Daedalus server.  It has
  * callbacks to alert its parent of new data and (dis)connection events.  It

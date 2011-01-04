@@ -1,4 +1,4 @@
-﻿/* $Id: OwariMessage.BoardState.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  *
  * Description: Signals to the player the initial state of the game board.
  *

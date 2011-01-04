@@ -1,4 +1,4 @@
-﻿/* $Id: OwariConfiguration.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  * 
  * Description: Allows the Game Manager to get and set configuration options for
  * Owari (starting number of seeds in each pit, etc).

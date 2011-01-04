@@ -1,4 +1,4 @@
-﻿/* $Id: Program.cs 821 2011-01-03 04:18:15Z crosis $
+﻿/* $Id$
  * 
  * Description: Automates the process of starting two clients for testing 
  * purposes.

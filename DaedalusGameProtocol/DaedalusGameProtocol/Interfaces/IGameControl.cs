@@ -1,4 +1,4 @@
-﻿/* $Id: IGameControl.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  *
  * Description: The Control interface is optionally implemented in conjunction 
  * with IGameLogic, to provide support for the Control GameMessage.   It allows 

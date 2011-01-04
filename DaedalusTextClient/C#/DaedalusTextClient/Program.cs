@@ -1,4 +1,4 @@
-﻿/* $Id: Program.cs 822 2011-01-03 04:23:25Z crosis $
+﻿/* $Id$
  * 
  * Description: A simple text based client that connects to the Daedalus Game
  * Manager and allows the user to manually type and send Daedalus Game Manager

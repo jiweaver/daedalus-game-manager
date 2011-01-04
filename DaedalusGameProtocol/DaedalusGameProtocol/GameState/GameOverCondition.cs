@@ -1,4 +1,4 @@
-﻿/* $Id: GameOverCondition.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  *
  * Description: The various end-of-game conditions.  Used by the protocol and 
  * the game interface.

@@ -1,4 +1,4 @@
-﻿/* $Id: TzaarPiece.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  * 
  * Description: This class represents a game piece.  It has the color of the
  * piece (WHITE or BLACK) as an attribute.  There are three concrete subclasses

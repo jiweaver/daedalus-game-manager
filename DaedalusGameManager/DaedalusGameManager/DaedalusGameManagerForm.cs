@@ -1,4 +1,4 @@
-﻿/* $Id: DaedalusGameManagerForm.cs 831 2011-01-03 13:38:33Z piranther $
+﻿/* $Id$
  *
  * Description: The main form instantiates a game server and a board painter to
  * display the game.  It handles user input, and mediates communication between

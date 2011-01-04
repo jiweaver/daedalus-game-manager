@@ -1,4 +1,4 @@
-﻿/* $Id: OwariMessage.Move.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  *
  * Description: When sent from a client to a server, a Move message delivers a 
  * players intended move coordinates.  When sent from the server to a client,

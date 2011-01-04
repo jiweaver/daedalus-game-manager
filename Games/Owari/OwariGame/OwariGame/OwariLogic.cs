@@ -1,4 +1,4 @@
-﻿/* $Id: OwariLogic.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  * 
  * Description: The game class contains the game state and the logic for making 
  * moves and checking the status of the game.

@@ -1,4 +1,4 @@
-﻿/* $Id: TzaarBoard.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  * 
  * Description: Holds a snapshot of a board state, i.e. which positions have
  * pieces on them, how many pieces, and which type and color.

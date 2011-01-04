@@ -1,4 +1,4 @@
-﻿/* $Id: GameBoard.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  * 
  * Description: A concrete implementation of the abstract GameBoard holds a 
  * snapshot of a board state.

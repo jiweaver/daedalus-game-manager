@@ -1,4 +1,4 @@
-﻿/* $Id: NetworkServerEventInfo.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  * 
  * Description: The NetworkServerEventInfo class is used to encapsulate
  * information about interactions between the NetworkServerEventHub and the

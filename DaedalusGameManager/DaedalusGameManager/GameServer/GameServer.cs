@@ -1,4 +1,4 @@
-﻿/* $Id: GameServer.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  *
  * Description: The game server instantiates a game, and listens for client
  * connections.  When a client connects, it instantiates a new

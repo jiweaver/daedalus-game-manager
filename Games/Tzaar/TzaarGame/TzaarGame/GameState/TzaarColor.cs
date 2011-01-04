@@ -1,4 +1,4 @@
-﻿/* $Id: TzaarColor.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  * 
  * Description: The color (WHITE or BLACK) serves as both the player color and
  * the piece color.

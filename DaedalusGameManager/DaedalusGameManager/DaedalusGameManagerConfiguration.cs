@@ -1,4 +1,4 @@
-﻿/* $Id: DaedalusGameManagerConfiguration.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  *
  * Description: Daedalus Game Manager configuration and default settings.
  *

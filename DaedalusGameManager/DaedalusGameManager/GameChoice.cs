@@ -1,4 +1,4 @@
-﻿/* $Id: GameChoice.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  *
  * Description: The GameChoice class is used by the DaedalusGameManagerForm to 
  * determine what games are supported, to determine what the current game is, 

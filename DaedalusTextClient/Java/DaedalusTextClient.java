@@ -1,4 +1,4 @@
-/* $Id: DaedalusTextClient.java 774 2010-12-29 23:30:58Z crosis $
+/* $Id$
  *
  * Description: A simple text based client that connects to the Daedalus Game
  * Manager and allows the user to manually type and send Daedalus Game Manager 

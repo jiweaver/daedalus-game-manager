@@ -1,4 +1,4 @@
-﻿/* $Id: DaedalusClientForm.cs 821 2011-01-03 04:18:15Z crosis $
+﻿/* $Id$
  *
  * Description: The GUI Client.  Maintains a copy of the game state, and updates
  * it whenever the local player makes a move.  It also updates the game state

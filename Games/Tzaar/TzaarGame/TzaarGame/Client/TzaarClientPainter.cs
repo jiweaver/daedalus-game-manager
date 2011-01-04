@@ -1,4 +1,4 @@
-﻿/* $Id: TzaarClientPainter.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  *
  * Description: Extends the normal painter class to provide for client side
  * needs.

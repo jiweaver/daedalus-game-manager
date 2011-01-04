@@ -1,4 +1,4 @@
-﻿/* $Id: SkeletonMessage.Move.cs 836 2011-01-03 16:28:19Z piranther $
+﻿/* $Id$
  *
  * Description: This is where you implement the Move command.  How the contents
  * of a move command are constructed and interpretted for a particular game is

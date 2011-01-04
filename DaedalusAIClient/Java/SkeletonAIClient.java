@@ -1,4 +1,4 @@
-/* $Id: SkeletonAIClient.java 832 2011-01-03 13:44:43Z piranther $
+/* $Id$
  *
  * Description: Skeleton for a concrete implementation of an AIClient.
  *

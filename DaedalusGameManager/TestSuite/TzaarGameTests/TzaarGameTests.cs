@@ -1,4 +1,4 @@
-﻿/* $Id: TzaarGameTests.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  * 
  * Description: Defines the GetNextMove and MakeTheBoard methods and passes them
  * to the TwoServerOneClientTest.

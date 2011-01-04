@@ -1,4 +1,4 @@
-﻿/* $Id: TzaarBoardMap.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  * 
  * Description: The board map encapsulates the complexity of determining which
  * board positions connect to which other board positions.  It provides the

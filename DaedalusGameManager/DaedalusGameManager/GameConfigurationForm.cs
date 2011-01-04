@@ -1,4 +1,4 @@
-﻿/* $Id: GameConfigurationForm.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  * 
  * Description: Sets up the form for configuring settings for the current game.
  *

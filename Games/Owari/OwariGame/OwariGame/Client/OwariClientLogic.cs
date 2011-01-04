@@ -1,4 +1,4 @@
-﻿/* $Id: OwariClientLogic.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  *
  * Description: The client logic is the code necessary for the GUI client to
  * interact with the game.

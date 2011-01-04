@@ -1,4 +1,4 @@
-﻿/* $Id: GameMessage.Version.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  *
  * Description: The Version message is sent from the server to the client when
  * the client first connects.  It informs the client of the version of the Game 

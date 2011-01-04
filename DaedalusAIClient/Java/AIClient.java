@@ -1,4 +1,4 @@
-/* $Id: AIClient.java 832 2011-01-03 13:44:43Z piranther $
+/* $Id$
  *
  * Description: An abstract client that connects to the Daedalus Game Manager 
  * and allows an AI to send Daedalus Game Manager Protocol messages.

@@ -1,4 +1,4 @@
-﻿/* $Id: GameMessage.YourPlayerNumber.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  * 
  * Description: Signals to the player which player number is theirs.
  *

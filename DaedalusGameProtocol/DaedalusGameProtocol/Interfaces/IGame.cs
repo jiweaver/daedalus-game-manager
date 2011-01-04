@@ -1,4 +1,4 @@
-﻿/* $Id: IGame.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  * 
  * Description: This is the interface games used to hook in to Daedalus Game 
  * Manager.

@@ -1,4 +1,4 @@
-﻿/* $Id: GameMessage.Chat.cs 829 2011-01-03 05:51:50Z crosis $
+﻿/* $Id$
  * 
  * Description: Chat messages allow us to implement a chat system between the
  * clients. Their contents should never impact the game being played.  The 

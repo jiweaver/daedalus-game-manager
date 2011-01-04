@@ -1,4 +1,4 @@
-﻿/* $Id: NetworkServerClientConnection.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  * 
  * Description: Each instance of the NetworkServerClientConnection ADT handles 
  * the TCP interactions with a particular connected client.

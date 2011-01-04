@@ -1,4 +1,4 @@
-﻿/* $Id: GameMessage.YourTurn.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  *
  * Description: Signals to the player that the server is waiting for their next
  * move.

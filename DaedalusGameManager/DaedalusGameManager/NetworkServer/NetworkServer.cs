@@ -1,4 +1,4 @@
-﻿/* $Id: NetworkServer.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  *
  * Description: The NetworkServer class is what the GameServer class relies on
  * to perform all of its actual TCP networking work.

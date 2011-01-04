@@ -1,4 +1,4 @@
-﻿/* $Id: SkeletonMessage.BoardState.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  *
  * Description: Signals to the player the initial state of the game board. For a
  * particular game, how the contents of such a message are constructed or

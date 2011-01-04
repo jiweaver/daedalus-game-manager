@@ -1,4 +1,4 @@
-﻿/* $Id: IGamePainter.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  * 
  * Description: An implementation of this interface draws the current state of a
  * gameboard into the picture box.

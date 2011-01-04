@@ -1,4 +1,4 @@
-﻿/* $Id: OwariGameInterface.cs 819 2011-01-03 01:46:43Z crosis $
+﻿/* $Id$
  * 
  * Description: This is how the game plugs in to the manager.
  *

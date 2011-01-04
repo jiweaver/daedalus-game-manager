@@ -1,4 +1,4 @@
-﻿/* $Id: TzaarLogic.cs 820 2011-01-03 03:05:53Z crosis $
+﻿/* $Id$
  * 
  * Description: The game class contains the game state and the logic for making
  * moves and checking the status of the game.
