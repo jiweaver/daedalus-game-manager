@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TestSuite")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Team Daedalus")]
 [assembly: AssemblyProduct("TestSuite")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
+[assembly: AssemblyCopyright("Copyright © 2010, Team Daedalus - Mathew Bergt, Jason Buck, Ken Kelley, and Justin Weaver")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

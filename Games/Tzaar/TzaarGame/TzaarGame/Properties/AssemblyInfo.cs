@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TzaarGame")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Team Daedalus")]
 [assembly: AssemblyProduct("TzaarGame")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
+[assembly: AssemblyCopyright("Copyright © Team Daedalus - Mathew Bergt, Jason Buck, Ken Kelley, and Justin Weaver")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
