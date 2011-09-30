@@ -31,6 +31,8 @@ namespace DaedalusGameManager
         // The buffer we use for asynchronous reads.
         private byte[] readBuffer;
 
+        private string partialMsg = "";
+
         // The socket stuff.
         private TcpClient actualTcpClient;
 
@@ -148,8 +150,38 @@ namespace DaedalusGameManager
             // Copy the message out of the read buffer so we can reuse it.
             msg = Encoding.ASCII.GetString(this.readBuffer, 0, bytesRead);
 
-            // Call the upper layer with the new data.
-            TriggerEvent_NewData(msg);
+            // Split on carriage return and linefeed.
+            string[] msgs = msg.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (msgs.Length == 1 && !msg.EndsWith("\r\n"))
+            {
+                // Only a partial command in this data.
+                partialMsg += msgs[0];
+            }
+            else
+            {
+                if (partialMsg.Length > 0)
+                {
+                    // Place the partial message onto the front of this list of
+                    // messages.
+                    msgs[0] = partialMsg + msgs[0];
+                    partialMsg = "";
+                }
+
+                int commandCount = msgs.Length;
+                if (!msg.EndsWith("\r\n"))
+                {
+                    // The final message is incomplete--wait for the rest.
+                    partialMsg += msgs[msgs.Length - 1];
+                    commandCount--;
+                }
+
+                // Pass back each message.
+                for (int i = 0; i < commandCount; i++)
+                {
+                    TriggerEvent_NewData(msgs[i]);
+                }
+            }
 
             BeginAsynchronousRead();
         }
