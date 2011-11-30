@@ -187,7 +187,29 @@ namespace TzaarGame
 
             board[col][row].Add(somePieces);
 
-            UpdatePieceCount(this);
+            // Count the pieces we just added.
+            foreach (TzaarPiece p in somePieces)
+            {
+                Type t = p.GetType();
+                if (p.Color == TzaarColor.WHITE)
+                {
+                    if (t == typeof(TzaarPiece.Tzaar))
+                        this.whiteTzaarCount++;
+                    else if (t == typeof(TzaarPiece.Tzarra))
+                        this.whiteTzarraCount++;
+                    else
+                        this.whiteTottCount++;
+                }
+                else
+                {
+                    if (t == typeof(TzaarPiece.Tzaar))
+                        this.blackTzaarCount++;
+                    else if (t == typeof(TzaarPiece.Tzarra))
+                        this.blackTzarraCount++;
+                    else
+                        this.blackTottCount++;
+                }
+            }
         }
 
         // Add a piece to the specified position.
@@ -198,7 +220,26 @@ namespace TzaarGame
 
             board[col][row].Add(aPiece);
 
-            UpdatePieceCount(this);
+            // Count the piece we just added.
+            Type t = aPiece.GetType();
+            if (aPiece.Color == TzaarColor.WHITE)
+            {
+                if (t == typeof(TzaarPiece.Tzaar))
+                    this.whiteTzaarCount++;
+                else if (t == typeof(TzaarPiece.Tzarra))
+                    this.whiteTzarraCount++;
+                else
+                    this.whiteTottCount++;
+            }
+            else
+            {
+                if (t == typeof(TzaarPiece.Tzaar))
+                    this.blackTzaarCount++;
+                else if (t == typeof(TzaarPiece.Tzarra))
+                    this.blackTzarraCount++;
+                else
+                    this.blackTottCount++;
+            }
         }
 
         // Remove and return the pieces at the specified position.
@@ -209,22 +250,40 @@ namespace TzaarGame
 
             Stack<TzaarPiece> S = board[col][row].Take();
 
-            UpdatePieceCount(this);
+            // Count the pieces we just removed.
+            foreach (TzaarPiece p in S)
+            {
+                Type t = p.GetType();
+                if (p.Color == TzaarColor.WHITE)
+                {
+                    if (t == typeof(TzaarPiece.Tzaar))
+                        this.whiteTzaarCount--;
+                    else if (t == typeof(TzaarPiece.Tzarra))
+                        this.whiteTzarraCount--;
+                    else
+                        this.whiteTottCount--;
+                }
+                else
+                {
+                    if (t == typeof(TzaarPiece.Tzaar))
+                        this.blackTzaarCount--;
+                    else if (t == typeof(TzaarPiece.Tzarra))
+                        this.blackTzarraCount--;
+                    else
+                        this.blackTottCount--;
+                }
+            }
 
             return S;
         }
 
-        // Return a copy of the contents of the specified position.
+        // Return the contents of the specified position.
         public Stack<TzaarPiece> Query(int col, int row)
         {
             if (!this.IsValidPosition(col, row))
                 return null;
 
-            Stack<TzaarPiece> S = board[col][row].Query();
-
-            UpdatePieceCount(this);
-
-            return S;
+            return board[col][row].Query();
         }
 
         // Return a full copy.

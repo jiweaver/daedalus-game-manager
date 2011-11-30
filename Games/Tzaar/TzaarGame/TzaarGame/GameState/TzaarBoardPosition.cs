@@ -51,13 +51,10 @@ namespace TzaarGame
             return SS;
         }
 
-        // Returns information about any pieces contained at this position.
+        // Returns the pieces contained in this position.
         public Stack<TzaarPiece> Query()
         {
-            Stack<TzaarPiece> SS = new Stack<TzaarPiece>();
-            for (int i = this.pieces.Count - 1; i >= 0; i--)
-                SS.Push(this.pieces.ElementAt(i));
-            return SS;
+            return this.pieces;
         }
     }
 }
