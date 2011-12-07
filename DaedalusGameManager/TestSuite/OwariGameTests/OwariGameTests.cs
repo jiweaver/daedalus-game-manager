@@ -20,7 +20,7 @@ using OwariGame;
 
 namespace TestSuite
 {
-    class OwariGameTests
+    internal class OwariGameTests
     {
         private static int whiteIndex;
         private static int blackIndex;
@@ -33,7 +33,7 @@ namespace TestSuite
             // Run the two-clients-one-server test.
             whiteIndex = 0;
             blackIndex = 0;
-            TwoClientsOneServerTest.Run(GetNextMove);
+            TwoClientsOneServerTest.Run(GetNextMove, GetTotalMoves, GetMoveNumber);
         }
 
         // The predefined moves for player white.
@@ -55,6 +55,16 @@ namespace TestSuite
                 new OwariMessage.Move(11),
                 new OwariMessage.Move(12),
             };
+
+        private static int GetMoveNumber(int playerNumber)
+        {
+            return (playerNumber == 1) ? whiteIndex : blackIndex;
+        }
+
+        private static int GetTotalMoves(int playerNumber)
+        {
+            return (playerNumber == 1) ? whiteMoves.Length : blackMoves.Length;
+        }
 
         private static string GetNextMove(int playerNumber)
         {

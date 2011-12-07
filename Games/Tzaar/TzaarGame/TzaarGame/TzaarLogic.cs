@@ -16,8 +16,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TzaarGame;
 using DaedalusGameProtocol;
+using TzaarGame;
 
 namespace TzaarGame
 {
@@ -130,15 +130,31 @@ namespace TzaarGame
                 }
             }
 
+            bool whiteIsOutOfPieces = this.WhiteIsOutOfPieces();
+            bool whiteCanCapture = this.WhiteCanCapture();
+            bool blackIsOutOfPieces = this.BlackIsOutOfPieces();
+            bool blackCanCapture = this.BlackCanCapture();
+
             // Is the game over?
-            if (IsGameOver())
+            if (whiteIsOutOfPieces || blackIsOutOfPieces || !whiteCanCapture || !blackCanCapture)
             {
-                if (this.state.GetCurrentPlayerNumber() == GamePlayer.One && !this.WhiteIsOutOfPieces()
-                    || this.state.GetCurrentPlayerNumber() == GamePlayer.Two && !this.BlackIsOutOfPieces())
-                    // The game is over!  This client wins!
-                    this.state.SetGameOver(this.state.GetCurrentPlayerNumber(), GameOverCondition.YouWin);
+                // The game is over.  Let's figure out who won.
+                if (whiteCanCapture && !blackCanCapture || !whiteIsOutOfPieces && blackIsOutOfPieces)
+                    // White won.
+                    this.state.SetGameOver(GamePlayer.One, GameOverCondition.YouWin);
+                else if (blackCanCapture && !whiteCanCapture || !blackIsOutOfPieces && whiteIsOutOfPieces)
+                    // Black won.
+                    this.state.SetGameOver(GamePlayer.Two, GameOverCondition.YouWin);
                 else
-                    this.state.SetGameOver((this.state.GetCurrentPlayerNumber() == GamePlayer.One) ? GamePlayer.Two : GamePlayer.One, GameOverCondition.YouWin);
+                {
+                    // Who won is more ambiguous, since the conditions to lose
+                    // are present on both sides.  We give the victory to the
+                    // current player.
+                    if (this.state.GetCurrentPlayerNumber() == GamePlayer.One)
+                        this.state.SetGameOver(GamePlayer.One, GameOverCondition.YouWin);
+                    else
+                        this.state.SetGameOver(GamePlayer.Two, GameOverCondition.YouWin);
+                }
             }
         }
 

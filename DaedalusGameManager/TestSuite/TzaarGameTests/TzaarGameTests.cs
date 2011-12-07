@@ -44,7 +44,7 @@ namespace TestSuite
             // Run the two-clients-one-server test.
             whiteIndex = 0;
             blackIndex = 0;
-            TwoClientsOneServerTest.Run(GetNextMove, MakeTheBoard());
+            TwoClientsOneServerTest.Run(GetNextMove, GetTotalMoves, GetMoveNumber, MakeTheBoard());
         }
 
         // The predefined moves for player white.
@@ -91,6 +91,11 @@ namespace TestSuite
                 new TzaarMessage.Move(2,5,3,6),
             };
 
+        // Alternate board.
+        private static string[] whiteMoves2 = new string[] {
+            new TzaarMessage.Move(2,5,1,4),
+        };
+
         // The predefined moves for player black.
         private static string[] blackMoves = new string[] {
                new TzaarMessage.Move(0,3,0,2),
@@ -133,8 +138,21 @@ namespace TestSuite
                new TzaarMessage.Move(8,2,5,5),
 
                new TzaarMessage.Move(5,5,5,7),
-               new TzaarMessage.Move(),
             };
+
+        // Alternate board.
+        private static string[] blackMoves2 = new string[] {
+        };
+
+        private static int GetMoveNumber(int playerNumber)
+        {
+            return (playerNumber == 1) ? whiteIndex : blackIndex;
+        }
+
+        private static int GetTotalMoves(int playerNumber)
+        {
+            return (playerNumber == 1) ? whiteMoves.Length : blackMoves.Length;
+        }
 
         private static string GetNextMove(int playerNumber)
         {
@@ -238,6 +256,25 @@ namespace TestSuite
             board.Add(new TzaarPiece.Tzarra(TzaarColor.BLACK), 8, 2);
             board.Add(new TzaarPiece.Tzarra(TzaarColor.WHITE), 8, 3);
             board.Add(new TzaarPiece.Tzarra(TzaarColor.BLACK), 8, 4);
+
+            return board;
+        }
+
+        // Place pieces on the board in alternate pre-defined positions.
+        private static TzaarBoard MakeTheBoard2()
+        {
+            TzaarBoard board = new TzaarBoard(true);
+
+            // Col 0.
+            board.Add(new TzaarPiece.Tzarra(TzaarColor.WHITE), 0, 4);
+            board.Add(new TzaarPiece.Tzarra(TzaarColor.BLACK), 0, 3);
+            board.Add(new TzaarPiece.Tzarra(TzaarColor.BLACK), 0, 3);
+
+            // Col 1.
+            board.Add(new TzaarPiece.Tzaar(TzaarColor.BLACK), 1, 4);
+
+            // Col 2.
+            board.Add(new TzaarPiece.Tzarra(TzaarColor.WHITE), 2, 5);
 
             return board;
         }

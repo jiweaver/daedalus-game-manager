@@ -15,37 +15,43 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Net;
-using System.Threading;
-using System.Net.Sockets;
 using System.IO;
-using DaedalusGameManager;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
 using System.Windows.Forms;
+using DaedalusGameManager;
 using DaedalusGameProtocol;
 
 namespace TestSuite
 {
-    abstract class TwoClientsOneServerTest
+    internal abstract class TwoClientsOneServerTest
     {
         public delegate string GetNextMoveDelegate(int playerNumber);
+        public delegate int GetTotalMovesDelegate(int playerNumber);
+        public delegate int GetMoveNumberDelegate(int playerNumber);
 
         private const int DelayBetweenMoves = 0; // In ms.
 
         private static DaedalusGameManagerForm f;
 
         private static GetNextMoveDelegate GetNextMove;
+        private static GetTotalMovesDelegate GetTotalMoves;
+        private static GetMoveNumberDelegate GetMoveNumber;
 
-        public static void Run(GetNextMoveDelegate getNextMove)
+        public static void Run(GetNextMoveDelegate getNextMove, GetTotalMovesDelegate getTotalMoves, GetMoveNumberDelegate getMoveNumber)
         {
-            Run(getNextMove, null);
+            Run(getNextMove, getTotalMoves, getMoveNumber, null);
         }
 
         // Make the board, start the server, and connect the clients.
-        public static void Run(GetNextMoveDelegate getNextMove, GameBoard aBoard)
+        public static void Run(GetNextMoveDelegate getNextMove, GetTotalMovesDelegate getTotalMoves, GetMoveNumberDelegate getMoveNumber, GameBoard aBoard)
         {
             GetNextMove = getNextMove;
+            GetTotalMoves = getTotalMoves;
+            GetMoveNumber = getMoveNumber;
             f = new DaedalusGameManagerForm(aBoard);
             while (!f.ServerIsRunning)
                 ;
@@ -175,7 +181,7 @@ namespace TestSuite
                         Thread.Sleep(DelayBetweenMoves);
 
                         // Send our next move.
-                        Console.WriteLine(string.Format("[{0}] Sending Message: {1}", myPlayerNumber.ToString(), nextMove));
+                        Console.WriteLine(string.Format("[{0}] (move {1} of {2}) Sending Message: {3}", myPlayerNumber.ToString(), GetMoveNumber((myPlayerNumber == GamePlayer.One) ? 1 : 2), GetTotalMoves((myPlayerNumber == GamePlayer.One) ? 1 : 2), nextMove));
                         sw.WriteLine(nextMove);
                     }
                     else if (GameMessage.IsGameOver(msg))
