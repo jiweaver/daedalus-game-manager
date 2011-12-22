@@ -1,13 +1,13 @@
 ﻿/* $Id$
  *
- * Description: The GameChoice class is used by the DaedalusGameManagerForm to 
- * determine what games are supported, to determine what the current game is, 
+ * Description: The GameChoice class is used by the DaedalusGameManagerForm to
+ * determine what games are supported, to determine what the current game is,
  * and to switch the current game to a different game.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
- * Distributed under the BSD-new license. For details see the BSD_LICENSE file 
+ * Distributed under the BSD-new license. For details see the BSD_LICENSE file
  * that should have been included with this distribution. If the source you
  * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
@@ -18,9 +18,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using DaedalusGameProtocol;
-using TzaarGame;
 using OwariGame;
 using SkeletonGame;
+using TzaarGame;
 
 namespace DaedalusGameManager
 {

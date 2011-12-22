@@ -1,15 +1,15 @@
 ﻿/* $Id$
- * 
+ *
  * Description: The board map encapsulates the complexity of determining which
  * board positions connect to which other board positions.  It provides the
  * IsValidPath() method which returns true if a valid path exists between the
  * specified source and target positions, and false otherwise.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
- * 
+ *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
- * that should have been included with this distribution. If the source you 
+ * that should have been included with this distribution. If the source you
  * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
@@ -17,14 +17,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using TzaarGame;
 using System.Reflection;
+using TzaarGame;
 
 namespace TzaarGame
 {
     public class TzaarBoardMap
     {
-        // 2-D array used for node initiation. The board will be represented in 
+        // 2-D array used for node initiation. The board will be represented in
         // board[col][row] format.
         private Node[][] paths;
 
@@ -83,24 +83,24 @@ namespace TzaarGame
 
         private static void CreateLeftBoardLinks(Node[][] board, int col, int row)
         {
-            // Create the northwest link for a node on the left side of the 
+            // Create the northwest link for a node on the left side of the
             // board.
             if (col != 0 && row != board[col].Length - 1)
                 board[col][row].nw = board[col - 1][row];
 
-            // Create the southwest link for a node on the left side of the 
+            // Create the southwest link for a node on the left side of the
             // board.
             if (col != 0 && row != 0)
                 board[col][row].sw = board[col - 1][row - 1];
 
-            // Create the northeast link for a node on the left side of the 
+            // Create the northeast link for a node on the left side of the
             // board.
             if (col == 3 && row > 3)
                 board[col][row].ne = board[col + 1][row];
             else if (col < 3 || (col == 3 && row < 3))
                 board[col][row].ne = board[col + 1][row + 1];
 
-            // Create the southeast link for a node on the left side of the 
+            // Create the southeast link for a node on the left side of the
             // board.
             if (col == 3 && row > 4)
                 board[col][row].se = board[col + 1][row - 1];

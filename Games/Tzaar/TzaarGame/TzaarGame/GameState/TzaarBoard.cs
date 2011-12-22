@@ -1,15 +1,15 @@
 ﻿/* $Id$
- * 
+ *
  * Description: Holds a snapshot of a board state, i.e. which positions have
  * pieces on them, how many pieces, and which type and color.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
- * 
+ *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
  * that should have been included with this distribution. If the source you
- * acquired this distribution from incorrectly removed this file, the license 
- * may be viewed at http://www.opensource.org/licenses/bsd-license.php. 
+ * acquired this distribution from incorrectly removed this file, the license
+ * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
 using System;
@@ -146,7 +146,7 @@ namespace TzaarGame
             for (int i = 0; i < 9; i++)
                 for (int j = 0; j < 9; j++)
                 {
-                    // If the position is not valid, we have passed the end of 
+                    // If the position is not valid, we have passed the end of
                     // the column. Move to the next column.
                     if (!board.IsValidPosition(i, j))
                         break;
@@ -337,7 +337,7 @@ namespace TzaarGame
                     {
                         // Randomly choose 0 - black or 1 - white.
                         player = rand.Next(0, 2);
-                        // Randomly choose between 0 and 2. This will be one of 
+                        // Randomly choose between 0 and 2. This will be one of
                         // the three types of pieces.
                         type = rand.Next(0, 3);
                         // Check that this particular color and type can still

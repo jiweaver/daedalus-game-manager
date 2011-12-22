@@ -4,12 +4,12 @@
  * used by the player to deliver move (and pass) commands to the server. A pass
  * is just a move with no data.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
  * that should have been included with this distribution. If the source you
- * acquired this distribution from incorrectly removed this file, the license 
+ * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
@@ -99,7 +99,7 @@ namespace TzaarGame
                 this.data = string.Format("{0}{{}}", typeof(TzaarMessage.Move).Name.ToString());
             }
 
-            // Constructor instantiates a TzaarMessage of type Move from the 
+            // Constructor instantiates a TzaarMessage of type Move from the
             // specified message string. Throws an exception if the message
             // string does not contain a valid TzaarMessage of type Move.
             public Move(string msg)

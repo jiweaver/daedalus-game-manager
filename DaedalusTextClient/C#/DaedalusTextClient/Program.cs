@@ -1,25 +1,25 @@
 ﻿/* $Id$
- * 
+ *
  * Description: A simple text based client that connects to the Daedalus Game
  * Manager and allows the user to manually type and send Daedalus Game Manager
  * Protocol messages.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
- * 
- * Distributed under the BSD-new license. For details see the BSD_LICENSE file 
- * that should have been included with this distribution. If the source you 
- * acquired this distribution from incorrectly removed this file, the license 
+ *
+ * Distributed under the BSD-new license. For details see the BSD_LICENSE file
+ * that should have been included with this distribution. If the source you
+ * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
 using System.Net;
 using System.Net.Sockets;
-using System.IO;
+using System.Text;
 using DaedalusGameProtocol;
 
 namespace DaedalusTextClient

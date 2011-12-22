@@ -1,26 +1,26 @@
 ﻿/* $Id$
- * 
- * Description: Each instance of the NetworkServerClientConnection ADT handles 
+ *
+ * Description: Each instance of the NetworkServerClientConnection ADT handles
  * the TCP interactions with a particular connected client.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
- * 
- * Distributed under the BSD-new license. For details see the BSD_LICENSE file 
- * that should have been included with this distribution. If the source you 
+ *
+ * Distributed under the BSD-new license. For details see the BSD_LICENSE file
+ * that should have been included with this distribution. If the source you
  * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel;
-using System.Net.Sockets;
 using System.IO;
-using System.Threading;
+using System.Linq;
 using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
 
 namespace DaedalusGameManager
 {

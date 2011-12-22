@@ -1,17 +1,17 @@
 ﻿/* $Id$
  *
- * Description: The Control interface is optionally implemented in conjunction 
- * with IGameLogic, to provide support for the Control GameMessage.   It allows 
- * Control messages to be handled directly by the game logic, bypassing the 
- * server.  The logic uses the callback delegate to send data to either client 
+ * Description: The Control interface is optionally implemented in conjunction
+ * with IGameLogic, to provide support for the Control GameMessage.   It allows
+ * Control messages to be handled directly by the game logic, bypassing the
+ * server.  The logic uses the callback delegate to send data to either client
  * in response to a Control message.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
- * Distributed under the BSD-new license. For details see the BSD_LICENSE file 
- * that should have been included with this distribution. If the source you 
- * acquired this distribution from incorrectly removed this file, the license 
+ * Distributed under the BSD-new license. For details see the BSD_LICENSE file
+ * that should have been included with this distribution. If the source you
+ * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 

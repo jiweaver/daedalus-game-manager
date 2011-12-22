@@ -4,7 +4,7 @@
  * display the game.  It handles user input, and mediates communication between
  * the server and the display.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
@@ -18,15 +18,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Threading;
 using System.Drawing.Drawing2D;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
 using DaedalusGameProtocol;
-using TzaarGame;
 using OwariGame;
+using TzaarGame;
 
 namespace DaedalusGameManager
 {

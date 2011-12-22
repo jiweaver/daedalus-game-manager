@@ -2,23 +2,23 @@
  *
  * Description: Signals to the player the initial state of the game board. For a
  * particular game, how the contents of such a message are constructed or
- * interpreted is entirely up to you, the game implementor.  The protocol 
+ * interpreted is entirely up to you, the game implementor.  The protocol
  * requires only that it begin with "BoardState{" and ends with "}".
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
- * that should have been included with this distribution. If the source you 
+ * that should have been included with this distribution. If the source you
  * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
 using System;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using DaedalusGameProtocol;
 
 namespace SkeletonGame
@@ -45,8 +45,8 @@ namespace SkeletonGame
                 this.board = (SkeletonBoard)aBoard.Copy();
             }
 
-            // Constructor parses a message string into a BoardState object. 
-            // Throws an exception if the message string does not represent a 
+            // Constructor parses a message string into a BoardState object.
+            // Throws an exception if the message string does not represent a
             // valid BoardState message.
             public BoardState(string msg)
             {

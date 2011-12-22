@@ -1,17 +1,17 @@
 ﻿/* $Id$
  *
  * Description: The Version message is sent from the server to the client when
- * the client first connects.  It informs the client of the version of the Game 
+ * the client first connects.  It informs the client of the version of the Game
  * Manager, the name of the game the manager is configured to play, the version
- * of the game implementation, and (in games that support configurations 
+ * of the game implementation, and (in games that support configurations
  * options).
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
- * Distributed under the BSD-new license. For details see the BSD_LICENSE file 
- * that should have been included with this distribution. If the source you 
- * acquired this distribution from incorrectly removed this file, the license 
+ * Distributed under the BSD-new license. For details see the BSD_LICENSE file
+ * that should have been included with this distribution. If the source you
+ * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 

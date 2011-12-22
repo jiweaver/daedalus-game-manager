@@ -5,7 +5,7 @@
  * up to you, that games implementor. All the protocol requires is that the
  * command begin with "Move{" and end with "}".
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file

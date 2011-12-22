@@ -3,7 +3,7 @@
  * Description: The client logic is the code necessary for the GUI client to
  * interact with the game.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
@@ -14,11 +14,11 @@
 
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DaedalusGameProtocol;
-using System.Drawing;
 
 namespace OwariGame
 {

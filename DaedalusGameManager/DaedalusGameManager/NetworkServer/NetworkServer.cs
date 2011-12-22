@@ -3,21 +3,21 @@
  * Description: The NetworkServer class is what the GameServer class relies on
  * to perform all of its actual TCP networking work.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
- * Distributed under the BSD-new license. For details see the BSD_LICENSE file 
+ * Distributed under the BSD-new license. For details see the BSD_LICENSE file
  * that should have been included with this distribution. If the source you
- * acquired this distribution from incorrectly removed this file, the license 
+ * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Net.Sockets;
 using System.Net;
+using System.Net.Sockets;
+using System.Text;
 
 namespace DaedalusGameManager
 {
@@ -164,7 +164,7 @@ namespace DaedalusGameManager
 
                 if (this.connection1 == null || this.connection2 == null)
                 {
-                    // If we don't have all the connections we need yet, keep 
+                    // If we don't have all the connections we need yet, keep
                     // listening.
 
                     try

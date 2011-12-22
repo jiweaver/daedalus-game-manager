@@ -3,7 +3,7 @@
  * Description: The game state holds the board state, as well as scoring and
  * turn information.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
@@ -12,9 +12,9 @@
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
+using System;
 using System.Collections.Generic;
 using DaedalusGameProtocol;
-using System;
 
 namespace OwariGame
 {

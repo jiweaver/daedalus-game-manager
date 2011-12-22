@@ -5,12 +5,12 @@
  * when it receives a move that the server has forwarded from the other player.
  * Displays the game state, handles user interaction and board clicks, etc.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
- * Distributed under the BSD-new license. For details see the BSD_LICENSE file 
- * that should have been included with this distribution. If the source you 
- * acquired this distribution from incorrectly removed this file, the license 
+ * Distributed under the BSD-new license. For details see the BSD_LICENSE file
+ * that should have been included with this distribution. If the source you
+ * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
@@ -19,13 +19,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
-using System.IO;
-using System.Drawing.Drawing2D;
+using System.Text;
+using System.Windows.Forms;
 using DaedalusGameProtocol;
 using OwariGame;
 using TzaarGame;

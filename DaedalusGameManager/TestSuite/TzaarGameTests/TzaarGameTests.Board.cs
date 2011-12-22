@@ -1,14 +1,14 @@
 ﻿/* $Id$
- * 
+ *
  * Description: Tests for the TzaarBoard class.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
- * 
+ *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
  * that should have been included with this distribution. If the source you
  * acquired this distribution from incorrectly removed this file, the license
- * may be viewed at http://www.opensource.org/licenses/bsd-license.php. 
+ * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
 using System;
@@ -39,8 +39,8 @@ namespace TestSuite
             // Test the functionality related to 'taking' a piece, or stack of
             // pieces, from a position on the game board. Additionally, it
             // should be possible to attempt to 'take' a piece from an invalid
-            // position on the game board without error. Throws Exception if 
-            // 'taking' the pieces from the board does not result in the 
+            // position on the game board without error. Throws Exception if
+            // 'taking' the pieces from the board does not result in the
             // specified position being empty.
             private static void TestTake()
             {
@@ -52,7 +52,7 @@ namespace TestSuite
                 TzaarPiece p2 = new TzaarPiece.Tzarra(TzaarColor.BLACK);
                 TzaarPiece p3 = new TzaarPiece.Tott(TzaarColor.BLACK);
 
-                // Add the pieces we created to the board at the target 
+                // Add the pieces we created to the board at the target
                 // position.
                 board.Add(p1, 0, 0);
                 board.Add(p2, 0, 0);
@@ -87,7 +87,7 @@ namespace TestSuite
                 TzaarPiece p2 = new TzaarPiece.Tzarra(TzaarColor.BLACK);
                 TzaarPiece p3 = new TzaarPiece.Tott(TzaarColor.BLACK);
 
-                // Add the pieces we created to the board at the target 
+                // Add the pieces we created to the board at the target
                 // position.
                 board.Add(p1, 0, 0);
                 board.Add(p2, 0, 0);

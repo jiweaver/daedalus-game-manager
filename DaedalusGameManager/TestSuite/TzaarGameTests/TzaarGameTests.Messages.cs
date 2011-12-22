@@ -1,13 +1,13 @@
 ﻿/* $Id$
- * 
+ *
  * Description: Tests for the TzaarProtocol message classes.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
- * 
+ *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
- * that should have been included with this distribution. If the source you 
- * acquired this distribution from incorrectly removed this file, the license 
+ * that should have been included with this distribution. If the source you
+ * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
@@ -35,9 +35,9 @@ namespace TestSuite
             }
 
             // Test the protocol components related to the 'board state' message
-            // type. Throws Exception if a 'board state' message is generated 
-            // which is inconsistent with the physical board state, or if a 
-            // board state defined by a 'board state' message is physically 
+            // type. Throws Exception if a 'board state' message is generated
+            // which is inconsistent with the physical board state, or if a
+            // board state defined by a 'board state' message is physically
             // inconsistent with the desired state.
             private static void TestBoardStateMessage()
             {
@@ -49,7 +49,7 @@ namespace TestSuite
                 TzaarPiece p2 = new TzaarPiece.Tzarra(TzaarColor.BLACK);
                 TzaarPiece p3 = new TzaarPiece.Tott(TzaarColor.BLACK);
 
-                // Add the pieces we created to the board at the target 
+                // Add the pieces we created to the board at the target
                 // position.
                 board.Add(p1, 0, 0);
                 board.Add(p2, 1, 0);
@@ -57,14 +57,14 @@ namespace TestSuite
 
                 TzaarMessage.BoardState message = new TzaarMessage.BoardState(board);
 
-                // Check that the generated 'board state' message matches the 
+                // Check that the generated 'board state' message matches the
                 // physical state of the board defined above.
                 if (((string)message).CompareTo("BoardState{{BLACK,Tzaar},{},{},{},{},{BLACK,Tzarra},{},{},{},{},{},{BLACK,Tott},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}}") != 0)
                     throw new Exception();
 
                 message = new TzaarMessage.BoardState("BoardState{{BLACK,Tzaar},{},{},{},{},{BLACK,Tzarra},{},{},{},{},{},{BLACK,Tott},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}}");
 
-                // Check that a board state generated from a 'board state' 
+                // Check that a board state generated from a 'board state'
                 // message is consistent with the desired state.
                 Stack<TzaarPiece> S = ((TzaarBoard)message.Board).Query(0, 0);
                 if (S == null || S.Count == 0 || S.Peek().GetType() != typeof(TzaarPiece.Tzaar))
@@ -83,8 +83,8 @@ namespace TestSuite
                     throw new Exception();
             }
 
-            // Test the protocol components related to the 'your color' message 
-            // type. Throws Exception if a 'your color' message is generated 
+            // Test the protocol components related to the 'your color' message
+            // type. Throws Exception if a 'your color' message is generated
             // which is inconsistent with the specified color.
             private static void TestYourColorMessage()
             {
@@ -95,7 +95,7 @@ namespace TestSuite
                 if (PlayerColor.GetColorFromPlayer(message.PlayerNumber) != TzaarColor.BLACK)
                     throw new Exception();
 
-                // Check that the generated string matches the format of the 
+                // Check that the generated string matches the format of the
                 // 'your color' message defined in the protocol for the
                 // specified color.
                 if (((string)message).CompareTo("YourPlayerNumber{Two}") != 0)
@@ -109,7 +109,7 @@ namespace TestSuite
             }
 
             // Test the protocol components related to the 'game over' message
-            // type. Throws Exception if a 'game over' message is generated 
+            // type. Throws Exception if a 'game over' message is generated
             // which is inconsistent with the specified game over condition.
             private static void TestGameOverMessage()
             {

@@ -1,12 +1,12 @@
 ﻿/* $Id$
- * 
+ *
  * Description: Tests for TzaarLogic.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
- * 
+ *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
- * that should have been included with this distribution. If the source you 
+ * that should have been included with this distribution. If the source you
  * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
@@ -15,8 +15,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TzaarGame;
 using DaedalusGameProtocol;
+using TzaarGame;
 
 namespace TestSuite
 {
@@ -56,7 +56,7 @@ namespace TestSuite
                         Stack<TzaarPiece> s = (((TzaarBoard)game.GetGameState().Board).Query(i, j));
                         if (s == null)
                             break;
-                        // There must be only one piece at each position on the 
+                        // There must be only one piece at each position on the
                         // board at the start of a new game.
                         if (s.Count != 1)
                             throw new Exception();
@@ -94,8 +94,8 @@ namespace TestSuite
             }
 
             // Test components controlling the logic for one player to 'capture'
-            // the piece of another player. Throws Exception if a valid 
-            // 'capture' results in an inconsistent game state, if an invalid 
+            // the piece of another player. Throws Exception if a valid
+            // 'capture' results in an inconsistent game state, if an invalid
             // capture is allowed, or if a player is allowed to move the
             // opposite player's game pieces.
             private static void TestCapture()
@@ -110,7 +110,7 @@ namespace TestSuite
 
                 game.Move(2, 2, 2, 3);
 
-                // The destination position should now contain the white piece 
+                // The destination position should now contain the white piece
                 // which captured the black piece.
                 if (board.Query(2, 3).Peek() != whitePiece)
                     throw new Exception();
@@ -221,8 +221,8 @@ namespace TestSuite
                     throw new Exception();
             }
 
-            // Test the components which determine an end-game state. Throws 
-            // Exception if the actual game state is an end-game state and the 
+            // Test the components which determine an end-game state. Throws
+            // Exception if the actual game state is an end-game state and the
             // game is not determined to be over.
             private static void TestGameOver()
             {
@@ -267,7 +267,7 @@ namespace TestSuite
                 if (!game.IsGameOver())
                     throw new Exception();
 
-                // Neither player can make a move, so we don't know who won; 
+                // Neither player can make a move, so we don't know who won;
                 // this is ok, because we can handle this case in the server
                 // based on who made the final move, and which turn of theirs it
                 // was. As far as the game logic is concerned, the game is over,

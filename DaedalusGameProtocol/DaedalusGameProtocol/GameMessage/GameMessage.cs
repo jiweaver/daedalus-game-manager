@@ -1,18 +1,18 @@
 ﻿/* $Id$
  *
  * Description: The GameMessage abstract class has concrete subclasses that each
- * implement GameMessage for one of the five message types (Move, 
- * YourPlayerNumber, YourTurn, BoardState, and GameOver). The classes can be 
+ * implement GameMessage for one of the five message types (Move,
+ * YourPlayerNumber, YourTurn, BoardState, and GameOver). The classes can be
  * constructed either with specific parameters or with a single string, which is
- * parsed automatically.  Instances of GameMessage subclasses are implicitly 
+ * parsed automatically.  Instances of GameMessage subclasses are implicitly
  * converted to strings on demand.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
- * Distributed under the BSD-new license. For details see the BSD_LICENSE file 
- * that should have been included with this distribution. If the source you 
- * acquired this distribution from incorrectly removed this file, the license 
+ * Distributed under the BSD-new license. For details see the BSD_LICENSE file
+ * that should have been included with this distribution. If the source you
+ * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
@@ -56,7 +56,7 @@ namespace DaedalusGameProtocol
             return msg.Substring(i + 1, j - i - 1);
         }
 
-        // If the message represents a valid GameMessage, return its derived 
+        // If the message represents a valid GameMessage, return its derived
         // type.
         protected static Type GetMessageType(string msg)
         {

@@ -1,10 +1,10 @@
 ﻿/* $Id$
  *
- * Description: When sent from a client to a server, a Move message delivers a 
+ * Description: When sent from a client to a server, a Move message delivers a
  * players intended move coordinates.  When sent from the server to a client,
  * the Move message delivers an opponents completed move.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
@@ -32,7 +32,7 @@ namespace OwariGame
                 }
             }
 
-            // Constructor instantiates a OwariMessage of type Move from the 
+            // Constructor instantiates a OwariMessage of type Move from the
             // specified origin and destination coordinates.
             public Move(int command)
             {
@@ -41,7 +41,7 @@ namespace OwariGame
                 this.data = string.Format("{0}{{{1}}}", typeof(OwariMessage.Move).Name.ToString(), this.command);
             }
 
-            // Constructor instantiates a OwariMessage of type Move from the 
+            // Constructor instantiates a OwariMessage of type Move from the
             // specified message string. Throws an exception is the message
             // string does not contain a valid OwariMessage of type Move.
             public Move(string msg)
@@ -52,7 +52,7 @@ namespace OwariGame
                 // Remove all whitespace from the message string.
                 string msgString = RemoveAllWhiteSpace(msg);
 
-				this.data = msgString;
+                this.data = msgString;
 
                 // Strip the packet enclosure.
                 string commandString = OwariMessage.GetMessageData(msgString);

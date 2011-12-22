@@ -6,21 +6,21 @@
  * clients have connected, it starts the game.  The server then mediates
  * communication between the game logic, the game state, and the clients.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
- * that should have been included with this distribution. If the source you 
- * acquired this distribution from incorrectly removed this file, the license 
+ * that should have been included with this distribution. If the source you
+ * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Net.Sockets;
 using System.Net;
+using System.Net.Sockets;
+using System.Text;
 using System.Threading;
 using DaedalusGameProtocol;
 
@@ -90,7 +90,7 @@ namespace DaedalusGameManager
         private void ServerEventHandler(NetworkServerEventInfo info)
         {
             if (this.shutDown)
-                // We have been told to shut down, don't start any new 
+                // We have been told to shut down, don't start any new
                 // connections now.
                 return;
 
@@ -116,7 +116,7 @@ namespace DaedalusGameManager
                 GameMessage.Version versionMsg = new GameMessage.Version(managerVersion, gameName, gameVersion, gameConfig);
                 this.server.SendMessage(info.ClientId, versionMsg);
 
-                // Call the upper layer's event handler to give it the good 
+                // Call the upper layer's event handler to give it the good
                 // news!
                 GameServerEventInfo tinfo = new GameServerEventInfo(GameServerEventInfoCode.ClientConnected, "Remote Client ( " + this.server.GetClientRemoteEndPoint(info.ClientId).ToString() + " ) has connected.");
                 this.gameStateUpdateEventHandler(tinfo);
@@ -364,7 +364,7 @@ namespace DaedalusGameManager
                     // Call the special "Control" operation in the game logic.
                     // Pass it a callback delegate.  The callback sends data to
                     // the specified client.  Afterwards, we check to see if the
-                    // game is over, and tell the upper layers to redraw the 
+                    // game is over, and tell the upper layers to redraw the
                     // graphics, etc.  Just in case something changed.
 
                     CallEvent_LogMessage("Control message from Player " + GetPlayerFromClientId(clientId) + ": " + s);
@@ -378,7 +378,7 @@ namespace DaedalusGameManager
                         return;
                     }
 
-                    // Call the GUI handler so it can redraw the graphics, 
+                    // Call the GUI handler so it can redraw the graphics,
                     // score, etc.
                     CallEvent_Update(this.logic.GetGameState());
                 }

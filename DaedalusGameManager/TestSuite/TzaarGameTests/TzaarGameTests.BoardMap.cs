@@ -1,14 +1,14 @@
 ﻿/* $Id$
- * 
+ *
  * Description: Tests for the TzaarBoardMap class.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
- * 
+ *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
  * that should have been included with this distribution. If the source you
  * acquired this distribution from incorrectly removed this file, the license
- * may be viewed at http://www.opensource.org/licenses/bsd-license.php. 
+ * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
 using System;
@@ -76,7 +76,7 @@ namespace TestSuite
                 if (boardMap.IsValidPath(board, 0, 0, 2, 2))
                     throw new Exception();
 
-                // Remove the obstructing piece and verify that (0, 0) and 
+                // Remove the obstructing piece and verify that (0, 0) and
                 // (2, 2) are now connected.
                 board.Take(1, 1);
                 if (!boardMap.IsValidPath(board, 0, 0, 2, 2))

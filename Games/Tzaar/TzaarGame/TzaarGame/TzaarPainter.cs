@@ -1,15 +1,15 @@
 ﻿/* $Id$
- * 
+ *
  * Description: The painter class takes a PictureBox as a parameter to its
  * constructor and latches onto it; then it draws the display within that box
  * whenever a game state is passed to the Draw method.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
- * 
+ *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
- * that should have been included with this distribution. If the source you 
- * acquired this distribution from incorrectly removed this file, the license 
+ * that should have been included with this distribution. If the source you
+ * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
@@ -19,8 +19,8 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
-using TzaarGame;
 using DaedalusGameProtocol;
+using TzaarGame;
 
 namespace TzaarGame
 {
@@ -40,7 +40,7 @@ namespace TzaarGame
             // board.
             public const int DistanceBetweenColumns = 109;
 
-            // There are 124 pixels between the rows of the un-scaled game 
+            // There are 124 pixels between the rows of the un-scaled game
             // board.
             public const int DistanceBetweenRows = 124;
 
@@ -194,7 +194,7 @@ namespace TzaarGame
             return np;
         }
 
-        // Takes a board position and returns the coordinate of the center of 
+        // Takes a board position and returns the coordinate of the center of
         // that position on the screen.
         public PointF BoardPositionToPictureBoxCoords(Point p)
         {

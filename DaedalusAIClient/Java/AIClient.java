@@ -3,7 +3,7 @@
  * Description: An abstract client that connects to the Daedalus Game Manager 
  * and allows an AI to send Daedalus Game Manager Protocol messages.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
  * Justin Weaver).
  * 
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file 

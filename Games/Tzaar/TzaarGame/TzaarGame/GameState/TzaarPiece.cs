@@ -1,19 +1,20 @@
 ﻿/* $Id$
- * 
+ *
  * Description: This class represents a game piece.  It has the color of the
  * piece (WHITE or BLACK) as an attribute.  There are three concrete subclasses
  * that each implement GamePiece, one for each type of game piece.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
- * 
+ *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
- * that should have been included with this distribution. If the source you 
- * acquired this distribution from incorrectly removed this file, the license 
+ * that should have been included with this distribution. If the source you
+ * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
 using DaedalusGameProtocol;
+
 namespace TzaarGame
 {
     public abstract class TzaarPiece

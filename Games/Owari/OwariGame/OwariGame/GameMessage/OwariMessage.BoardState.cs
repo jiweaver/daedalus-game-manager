@@ -2,7 +2,7 @@
  *
  * Description: Signals to the player the initial state of the game board.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010-2011, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
  *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
@@ -13,9 +13,9 @@
 
 using System;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using DaedalusGameProtocol;
 
 namespace OwariGame
@@ -33,7 +33,7 @@ namespace OwariGame
                 }
             }
 
-            // Constructor to instantiate a new BoardState based on the 
+            // Constructor to instantiate a new BoardState based on the
             // specified OwariBoard object.
             public BoardState(OwariBoard aBoard)
             {
@@ -42,7 +42,7 @@ namespace OwariGame
                 this.board = (OwariBoard)aBoard.Copy();
             }
 
-            // Constructor parses a message string into a BoardState object. 
+            // Constructor parses a message string into a BoardState object.
             // Throws an exception if the message string does not represent a
             // valid BoardState message.
             public BoardState(string msg)
