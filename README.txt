@@ -1,5 +1,5 @@
 Daedalus Game Manager README
-Copyright 2010 (c) Mathew Bergt, Jason Buck, Ken Kelley, and Justin Weaver.
+Copyright 2010-2011 (c) Mathew Bergt, Jason Buck, Ken Kelley, and Justin Weaver.
 
 
 In This Directory:
