@@ -1,14 +1,14 @@
 ﻿/* $Id$
- * 
+ *
  * Description: The game class contains the game state and the logic for making
  * moves and checking the status of the game.
  *
- * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and 
+ * Copyright (c) 2010, Team Daedalus (Mathew Bergt, Jason Buck, Ken Kelley, and
  * Justin Weaver).
- * 
+ *
  * Distributed under the BSD-new license. For details see the BSD_LICENSE file
- * that should have been included with this distribution. If the source you 
- * acquired this distribution from incorrectly removed this file, the license 
+ * that should have been included with this distribution. If the source you
+ * acquired this distribution from incorrectly removed this file, the license
  * may be viewed at http://www.opensource.org/licenses/bsd-license.php.
  */
 
@@ -67,6 +67,35 @@ namespace TzaarGame
 
             // The command was successful!
             return true;
+        }
+
+        // Checks if the game is over.  If it is over, then this method sets
+        // the Game Over condition.
+        private void CheckForGameOver()
+        {
+            bool whiteCanCapture = this.WhiteCanCapture();
+            bool blackCanCapture = this.BlackCanCapture();
+
+            if (whiteCanCapture && !blackCanCapture)
+            {
+                // White can capture, and black cannot; white won.
+                this.state.SetGameOver(GamePlayer.One, GameOverCondition.YouWin);
+            }
+            else if (blackCanCapture && !whiteCanCapture)
+            {
+                // Black can capture, and white cannot; black won.
+                this.state.SetGameOver(GamePlayer.Two, GameOverCondition.YouWin);
+            }
+            else if (!whiteCanCapture && !blackCanCapture)
+            {
+                // Neither side can make a move.  The rules state that a
+                // player loses when they can't make any more moves.  If
+                // this is the player's first move of the turn, they can
+                // pass their second move.   If it is their second move,
+                // then the opposing player goes next.  Either way, the
+                // current player wins.
+                this.state.SetGameOver(this.state.GetCurrentPlayerNumber(), GameOverCondition.YouWin);
+            }
         }
 
         // Convenience overload.
@@ -130,32 +159,7 @@ namespace TzaarGame
                 }
             }
 
-            bool whiteIsOutOfPieces = this.WhiteIsOutOfPieces();
-            bool whiteCanCapture = this.WhiteCanCapture();
-            bool blackIsOutOfPieces = this.BlackIsOutOfPieces();
-            bool blackCanCapture = this.BlackCanCapture();
-
-            // Is the game over?
-            if (whiteIsOutOfPieces || blackIsOutOfPieces || !whiteCanCapture || !blackCanCapture)
-            {
-                // The game is over.  Let's figure out who won.
-                if (whiteCanCapture && !blackCanCapture || !whiteIsOutOfPieces && blackIsOutOfPieces)
-                    // White won.
-                    this.state.SetGameOver(GamePlayer.One, GameOverCondition.YouWin);
-                else if (blackCanCapture && !whiteCanCapture || !blackIsOutOfPieces && whiteIsOutOfPieces)
-                    // Black won.
-                    this.state.SetGameOver(GamePlayer.Two, GameOverCondition.YouWin);
-                else
-                {
-                    // Who won is more ambiguous, since the conditions to lose
-                    // are present on both sides.  We give the victory to the
-                    // current player.
-                    if (this.state.GetCurrentPlayerNumber() == GamePlayer.One)
-                        this.state.SetGameOver(GamePlayer.One, GameOverCondition.YouWin);
-                    else
-                        this.state.SetGameOver(GamePlayer.Two, GameOverCondition.YouWin);
-                }
-            }
+            CheckForGameOver();
         }
 
         // Perform a stack move.
