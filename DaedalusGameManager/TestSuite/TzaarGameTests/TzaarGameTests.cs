@@ -89,11 +89,15 @@ namespace TestSuite
 
                 new TzaarMessage.Move(3,5,2,5),
                 new TzaarMessage.Move(2,5,3,6),
+
+                new TzaarMessage.Move(3,6,5,7),
+                new TzaarMessage.Move(2,0,4,2),
             };
 
         // Alternate board.
         private static string[] whiteMoves2 = new string[] {
             new TzaarMessage.Move(2,5,1,4),
+            new TzaarMessage.Move(),
         };
 
         // The predefined moves for player black.
@@ -138,10 +142,13 @@ namespace TestSuite
                new TzaarMessage.Move(8,2,5,5),
 
                new TzaarMessage.Move(5,5,5,7),
+               new TzaarMessage.Move(),
             };
 
         // Alternate board.
         private static string[] blackMoves2 = new string[] {
+               new TzaarMessage.Move(0,3,1,4),
+               new TzaarMessage.Move(),
         };
 
         private static int GetMoveNumber(int playerNumber)

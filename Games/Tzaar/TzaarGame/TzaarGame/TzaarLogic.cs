@@ -73,28 +73,30 @@ namespace TzaarGame
         // the Game Over condition.
         private void CheckForGameOver()
         {
-            bool whiteCanCapture = this.WhiteCanCapture();
-            bool blackCanCapture = this.BlackCanCapture();
+            bool isSecondMove = !this.state.IsFirstMoveOfTurn;
 
-            if (whiteCanCapture && !blackCanCapture)
+            if (isSecondMove)
             {
-                // White can capture, and black cannot; white won.
-                this.state.SetGameOver(GamePlayer.One, GameOverCondition.YouWin);
-            }
-            else if (blackCanCapture && !whiteCanCapture)
-            {
-                // Black can capture, and white cannot; black won.
-                this.state.SetGameOver(GamePlayer.Two, GameOverCondition.YouWin);
-            }
-            else if (!whiteCanCapture && !blackCanCapture)
-            {
-                // Neither side can make a move.  The rules state that a
-                // player loses when they can't make any more moves.  If
-                // this is the player's first move of the turn, they can
-                // pass their second move.   If it is their second move,
-                // then the opposing player goes next.  Either way, the
-                // current player wins.
-                this.state.SetGameOver(this.state.GetCurrentPlayerNumber(), GameOverCondition.YouWin);
+                // Up next is the first move of the opposing color's turn.
+                // Check for gameover condition.
+                GamePlayer nextPlayer = (this.state.GetCurrentPlayerNumber() == GamePlayer.Two) ? GamePlayer.One : GamePlayer.Two;
+                TzaarColor nextColor = PlayerColor.GetColorFromPlayer(nextPlayer);
+
+                bool blackCanCapture = this.BlackCanCapture();
+                bool whiteCanCapture = this.WhiteCanCapture();
+
+                if (nextColor == TzaarColor.BLACK && !blackCanCapture)
+                {
+                    // Black cannot do anything on their first move.
+                    // White wins.
+                    this.state.SetGameOver(PlayerColor.GetPlayerFromColor(TzaarColor.WHITE), GameOverCondition.YouWin);
+                }
+                else if (nextColor == TzaarColor.WHITE && !whiteCanCapture)
+                {
+                    // White cannot do anything on their first move.
+                    // Black wins.
+                    this.state.SetGameOver(PlayerColor.GetPlayerFromColor(TzaarColor.BLACK), GameOverCondition.YouWin);
+                }
             }
         }
 
@@ -158,8 +160,6 @@ namespace TzaarGame
                     Stack(m.FromCol, m.FromRow, m.ToCol, m.ToRow);
                 }
             }
-
-            CheckForGameOver();
         }
 
         // Perform a stack move.
@@ -272,6 +272,16 @@ namespace TzaarGame
             return (WhiteIsOutOfPieces() || BlackIsOutOfPieces() || !WhiteCanCapture() || !BlackCanCapture());
         }
 
+        // Called when player attempts an illegal move.
+        private void IllegalMove()
+        {
+            // Get the number of the other player.
+            GamePlayer otherPlayer = (this.state.GetCurrentPlayerNumber() == GamePlayer.Two) ? GamePlayer.One : GamePlayer.Two;
+
+            // Set gameover state.
+            this.state.SetGameOver(otherPlayer, GameOverCondition.OpponentMadeIllegalMove);
+        }
+
         public void MakeMove(GamePlayer playerNumber, string msg)
         {
             // Parse it as a move command.
@@ -283,6 +293,7 @@ namespace TzaarGame
             catch (Exception)
             {
                 // Junk message.
+                IllegalMove();
                 throw new Exception(playerNumber + " forfeits, because they sent a move command that could not be parsed.");
             }
 
@@ -293,6 +304,7 @@ namespace TzaarGame
                 if (!Pass())
                 {
                     // The attempt to Pass failed!
+                    IllegalMove();
                     throw new Exception(playerNumber + " forfeits, because they attempted an illegal Pass.");
                 }
             }
@@ -306,9 +318,12 @@ namespace TzaarGame
                 catch (Exception ex)
                 {
                     // The move attempt failed!
+                    IllegalMove();
                     throw new Exception(playerNumber + "Move Failed: " + move + "  Reason: " + ex.Message);
                 }
             }
+
+            CheckForGameOver();
         }
     }
 }
