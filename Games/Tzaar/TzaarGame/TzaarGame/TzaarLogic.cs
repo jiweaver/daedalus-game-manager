@@ -73,9 +73,17 @@ namespace TzaarGame
         // the Game Over condition.
         private void CheckForGameOver()
         {
-            bool isSecondMove = !this.state.IsFirstMoveOfTurn;
-
-            if (isSecondMove)
+            if (BlackIsOutOfPieces())
+            {
+                // Black is out of pieces.  White wins.
+                this.state.SetGameOver(PlayerColor.GetPlayerFromColor(TzaarColor.WHITE), GameOverCondition.YouWin);
+            }
+            else if (WhiteIsOutOfPieces())
+            {
+                // White is out of pieces.  Black wins.
+                this.state.SetGameOver(PlayerColor.GetPlayerFromColor(TzaarColor.BLACK), GameOverCondition.YouWin);
+            }
+            else if (!this.state.IsFirstMoveOfTurn)
             {
                 // Up next is the first move of the opposing color's turn.
                 // Check for gameover condition.
